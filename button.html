@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to JavaScript</title>
+    <style>
+        /* Basic styles for the button and the container */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f8ff;
+        }
+
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #message {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to JavaScript!</h1>
+        <p>Click the button below to see JavaScript in action:</p>
+        <button id="actionButton">Click Me</button>
+        <p id="message">Hello, Sarah!!!</p>
+    </div>
+
+    <script>
+        // Select the button and message elements
+        const button = document.getElementById('actionButton');
+        const message = document.getElementById('message');
+
+        // Add a click event listener to the button
+        button.addEventListener('click', () => {
+            // Change the text of the message when the button is clicked
+            message.textContent = 'Hello, this is JavaScript in action!';
+
+            // Optionally, change the button text
+            button.textContent = 'Clicked!';
+        });
+    </script>
+</body>
+</html>
